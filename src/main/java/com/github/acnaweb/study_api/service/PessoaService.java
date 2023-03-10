@@ -1,38 +1,24 @@
 package com.github.acnaweb.study_api.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import com.github.acnaweb.study_api.model.Pessoa;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import com.github.acnaweb.study_api.model.Pessoa;
+import com.github.acnaweb.study_api.repository.PessoaRepository;
+
+@Service
 public class PessoaService {
-	private List<Pessoa> pessoas;
-	
-	public PessoaService() {
-		load();
-	}
-	
-	private void load() {
-		pessoas = new ArrayList<>();
-		
-		Pessoa pessoa = new Pessoa();
-		pessoa.setId(1L);
-		pessoa.setNome("AC");
-		pessoas.add(pessoa);
-				
-		pessoa = new Pessoa();
-		pessoa.setId(2L);
-		pessoa.setNome("Pelé");
-		pessoas.add(pessoa);
-		
-		pessoa = new Pessoa();
-		pessoa.setId(3L);
-		pessoa.setNome("Messi");
-		pessoas.add(pessoa);
-		
-	}
-	
+
+	@Autowired
+	private PessoaRepository pessoaRepository;
+
 	public List<Pessoa> list() {
-		return pessoas;
+		return pessoaRepository.findAll();
+	}
+	
+	public Pessoa save(Pessoa pessoa) {			
+		return pessoaRepository.save(pessoa);
 	}
 }

@@ -1,8 +1,22 @@
 package com.github.acnaweb.study_api.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "pessoas")
 public class Pessoa {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(name = "nome_completo")
 	private String nome;
+	
 	private int idade;
 
 	public Long getId() {
@@ -13,6 +27,7 @@ public class Pessoa {
 		this.id = id;
 	}
 
+	
 	public String getNome() {
 		return nome;
 	}
