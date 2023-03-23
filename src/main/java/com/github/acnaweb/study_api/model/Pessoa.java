@@ -11,12 +11,12 @@ import javax.persistence.Table;
 @Table(name = "pessoas")
 public class Pessoa {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+
 	@Column(name = "nome_completo")
 	private String nome;
-	
+
 	private int idade;
 
 	public Long getId() {
@@ -27,7 +27,6 @@ public class Pessoa {
 		this.id = id;
 	}
 
-	
 	public String getNome() {
 		return nome;
 	}
