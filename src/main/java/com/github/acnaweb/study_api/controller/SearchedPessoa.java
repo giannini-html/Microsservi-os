@@ -1,5 +1,7 @@
 package com.github.acnaweb.study_api.controller;
 
+import com.github.acnaweb.study_api.model.Pessoa;
+
 public class SearchedPessoa {
 	private Long id;
 	private String nome;
@@ -14,6 +16,13 @@ public class SearchedPessoa {
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	
+	public static SearchedPessoa toDto(Pessoa pessoa) {
+		SearchedPessoa dto = new SearchedPessoa();
+		dto.setId(pessoa.getId());
+		dto.setNome(pessoa.getNome());		
+		return dto;
 	}
 
 
