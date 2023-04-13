@@ -21,11 +21,6 @@ public class Pessoa {
 	@Column(name = "nome_completo")
 	private String nome;
 
-	private LocalDate dataNascimento;
-	
-	private LocalDateTime createdAt;
-
-	@Transient
 	private int idade;
 
 	public Long getId() {
@@ -42,22 +37,6 @@ public class Pessoa {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public LocalDate getDataNascimento() {
-		return dataNascimento;
-	}
-
-	public void setDataNascimento(LocalDate dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
-
-	public LocalDateTime getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(LocalDateTime createdAt) {
-		this.createdAt = createdAt;
 	}
 
 	public int getIdade() {
