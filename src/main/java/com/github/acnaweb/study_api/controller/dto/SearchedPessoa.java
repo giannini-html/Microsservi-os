@@ -1,4 +1,4 @@
-package com.github.acnaweb.study_api.controller;
+package com.github.acnaweb.study_api.controller.dto;
 
 import com.github.acnaweb.study_api.model.Pessoa;
 

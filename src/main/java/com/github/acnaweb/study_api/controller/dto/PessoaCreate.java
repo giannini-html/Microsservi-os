@@ -3,7 +3,6 @@ package com.github.acnaweb.study_api.controller.dto;
 public class PessoaCreate {
 
 	private String nome;
-
 	private int idade;
 
 	public String getNome() {
@@ -21,5 +20,7 @@ public class PessoaCreate {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
+	
+	
 
 }

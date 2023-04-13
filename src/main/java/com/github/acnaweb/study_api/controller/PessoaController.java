@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.github.acnaweb.study_api.controller.dto.PessoaCreated;
+import com.github.acnaweb.study_api.controller.dto.PessoaUpdated;
+import com.github.acnaweb.study_api.controller.dto.SearchedPessoa;
 import com.github.acnaweb.study_api.model.Pessoa;
 import com.github.acnaweb.study_api.repository.PessoaRepository;
 import com.github.acnaweb.study_api.service.PessoaService;

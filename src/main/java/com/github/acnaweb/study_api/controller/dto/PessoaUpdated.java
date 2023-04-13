@@ -1,4 +1,4 @@
-package com.github.acnaweb.study_api.controller;
+package com.github.acnaweb.study_api.controller.dto;
 
 public class PessoaUpdated {
 	private Long id;
